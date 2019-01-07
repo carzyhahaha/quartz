@@ -31,6 +31,8 @@ public class Demo1 {
             // define the job and tie it to our HelloJob class
             JobDetail job = newJob(HelloJob.class)
                     .withIdentity("myJob", "group1")
+                    .usingJobData("key1", "hello2")
+                    .usingJobData("key2", "world")
                     .build();
 
             // Trigger the job to run now, and then every 40 seconds
@@ -38,8 +40,8 @@ public class Demo1 {
                     .withIdentity("myTrigger", "group1")
                     .startNow()
                     .withSchedule(simpleSchedule()
-                            .withIntervalInSeconds(40)
-                            .repeatForever())
+                            .withIntervalInSeconds(1)
+                            .withRepeatCount(2))
                     .build();
 
             // Tell quartz to schedule the job using our trigger
