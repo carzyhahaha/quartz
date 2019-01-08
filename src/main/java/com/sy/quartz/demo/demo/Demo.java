@@ -79,6 +79,13 @@ public class Demo {
 
 
             /** cronTrigger
+             * Seconds
+             * Minutes
+             * Hours
+             * Day-of-Month 当月第几天
+             * Month
+             * Day-of-Week 星期几
+             * Year (optional field)
              * , 多选
              * - 连续
              * * 通配 该位置全部时间生效
@@ -88,13 +95,6 @@ public class Demo {
              * L 最后一天 结合 - 可指定偏移量 倒数?
              * W 指定最近给定日期的工作日
              * #  指定本月的第几个工作日 或 本月第几个星期x
-             * Seconds
-             * Minutes
-             * Hours
-             * Day-of-Month 当月第几天
-             * Month
-             * Day-of-Week 星期几
-             * Year (optional field)
              */
             Trigger trigger1 = newTrigger()
                     .withIdentity("cronTrigger", "gropu1")
