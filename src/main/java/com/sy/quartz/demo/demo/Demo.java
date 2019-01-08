@@ -66,7 +66,7 @@ public class Demo {
                             .withIntervalInSeconds(1)
                             //重复次数，可以是0、正整数，以及常量SimpleTrigger.REPEAT_INDEFINITELY(等同repeatForever)
                             .withRepeatCount(SimpleTrigger.REPEAT_INDEFINITELY)
-                            /** 失败/错过应对策略(考英语水平了)
+                            /** 失败/错过应对策略
                              * MISFIRE_INSTRUCTION_IGNORE_MISFIRE_POLICY
                              * MISFIRE_INSTRUCTION_FIRE_NOW
                              * MISFIRE_INSTRUCTION_RESCHEDULE_NOW_WITH_EXISTING_REPEAT_COUNT
